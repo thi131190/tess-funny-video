@@ -12,7 +12,7 @@ export default function Home(props) {
       <main>
         <Container>
           {movies.length > 0 &&
-            movies.map((movie, index) => <Movie movie={movie} key={++index} />)}
+            movies.map((movie, index) => <Movie movie={movie} key={++index} sharedBy={props.user.email} />)}
         </Container>
       </main>
     </React.Fragment>

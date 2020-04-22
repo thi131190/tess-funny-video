@@ -25,10 +25,7 @@ import ExpandCollapse from "react-expand-collapse";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // width: "360",
-    // marginBottom: 10,
     minHeight: 360,
-    // padding: 10,
   },
   media: {
     height: 0,
@@ -72,7 +69,7 @@ export default function Movie(props) {
               {props.movie.snippet.title}
             </Typography>
             <Typography variant="body1" align="left" component="p">
-              <i>Shared by: thi@gmail.com</i>
+              <i>Shared by: {props.sharedBy}</i>
             </Typography>
             <Grid container justify="flex-start">
               <Typography color="primary">

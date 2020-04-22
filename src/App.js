@@ -50,7 +50,8 @@ function App() {
   const getUser = async () => {
     const token = localStorage.getItem("token") || getParam("api_key");
     if (token) {
-      const url = `https://fakebook-fs.herokuapp.com/user/get_user`;
+      // const url = `https://fakebook-fs.herokuapp.com/user/get_user`;
+      const url = `${process.env.REACT_APP_API_URL}/user/get_user`;
       const response = await fetch(url, {
         headers: {
           "Content-Type": "application/json",
@@ -100,7 +101,7 @@ function App() {
               <Register />
             </Route>
             <Route path="/">
-              <Home movies={movies} />
+              <Home movies={movies} user={user} />
             </Route>
           </Switch>
         </div>

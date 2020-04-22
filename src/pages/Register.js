@@ -62,7 +62,7 @@ export default function SignUp() {
 
   const register = async (e) => {
     e.preventDefault();
-    const url = `https://fakebook-fs.herokuapp.com/user/signup`;
+    const url = `${process.env.REACT_APP_API_URL}/user/signup`;
     const response = await fetch(url, {
       method: "POST",
       headers: {
